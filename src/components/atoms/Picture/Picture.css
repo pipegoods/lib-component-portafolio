@@ -1,0 +1,16 @@
+.picture {
+  user-select: none;
+}
+
+.picture img {
+  display: block;
+  width: 100%;
+}
+
+.is-rounded img {
+  border-radius: 9999px;
+}
+
+.with-border img {
+  border: 1px solid #7e858c;
+}

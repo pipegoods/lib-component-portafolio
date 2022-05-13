@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atom/Button Click Me 1`] = `
+<button>
+  Click me!
+</button>
+`;
+
+exports[`Storyshots Atom/Button Hello World 1`] = `
+<button>
+  Hello world!
+</button>
+`;
