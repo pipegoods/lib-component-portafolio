@@ -1,0 +1,40 @@
+.paragraph {
+  width: 100%;
+}
+
+.size-xs {
+  font-size: 14px;
+}
+
+.size-sm {
+  font-size: 1.2rem;
+}
+
+.size-md {
+  font-size: 1.4rem;
+}
+
+.size-lg {
+  font-size: 1.6rem;
+}
+
+.weight-normal {
+  font-weight: 400;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-semibold {
+  font-weight: 600;
+}
+
+.is-inline {
+  display: inline-block;
+  max-width: max-content;
+}
+
+.is-centered {
+  text-align: center;
+}

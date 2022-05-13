@@ -5,7 +5,7 @@ import "./Avatar.css";
 type AvatarProps = {
   src: string;
   alt: string;
-  size: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg";
 };
 
 const Avatar = ({ src, alt, size = "md" }: AvatarProps) => (
