@@ -9,6 +9,7 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.json",
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
+    "storybook:deploy": "start-storybook -p 80 --no-open",
     "build-storybook": "build-storybook"
   },
   "author": "andres-vizcaino",
