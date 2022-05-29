@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import "./Picture.css";
 
@@ -15,7 +16,8 @@ const Picture = ({ src, alt, width, height, isRounded, withBorder }: PictureProp
     className={classNames("picture", {
       "is-rounded": isRounded,
       "with-border": withBorder
-    })}>
+    })}
+  >
     <img src={src} alt={alt} style={{ height, maxWidth: width }} />
   </picture>
 );

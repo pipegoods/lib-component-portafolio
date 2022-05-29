@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import "./Paragraph.css";
 
@@ -20,7 +21,8 @@ const Paragraph = ({
     className={classNames(`paragraph size-${size} weight-${weight}`, {
       "is-inline": isInline,
       "is-centered": isCentered
-    })}>
+    })}
+  >
     {children}
   </p>
 );

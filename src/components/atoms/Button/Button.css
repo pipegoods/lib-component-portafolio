@@ -13,7 +13,7 @@ button {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
-  background-color: #007bff;
+  background-color: var(--color-primary);
   border-color: #007bff;
 }
 

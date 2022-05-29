@@ -1,3 +1,4 @@
+import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Heading from "./Heading";
 
@@ -13,17 +14,10 @@ const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
 
 export const Default = Template.bind({});
 
-export const Sm = Template.bind({});
-Sm.args = {
-  size: "sm"
-};
-
-export const Md = Template.bind({});
-Md.args = {
-  size: "md"
-};
-
-export const Lg = Template.bind({});
-Lg.args = {
-  size: "lg"
-};
+export const Sizes = () => (
+  <>
+    <Heading size="sm">Este es un titulo muy bonito!</Heading>
+    <Heading size="md">Este es un titulo muy bonito!</Heading>
+    <Heading size="lg">Este es un titulo muy bonito!</Heading>
+  </>
+);

@@ -1,3 +1,4 @@
+import React from "react";
 import Picture from "../Picture";
 import { mapSize } from "./helpers";
 import "./Avatar.css";

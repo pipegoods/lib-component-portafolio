@@ -1,9 +1,13 @@
+import React from "react";
+import { PropsWithChildren } from "react";
 import "./Button.css";
 
 type ButtonProps = {
-  label: string;
+  type?: "primary" | "secondary" | "tertiary";
 };
 
-const Button = (props: ButtonProps) => <button>{props.label}</button>;
+const Button = ({ children, type = "primary" }: PropsWithChildren<ButtonProps>) => (
+  <button className={`button type-${type}`}>{children}</button>
+);
 
 export default Button;
