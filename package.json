@@ -12,7 +12,8 @@
     "storybook:deploy": "start-storybook -p 80 --no-open",
     "build-storybook": "build-storybook",
     "rollup:watch": "rollup -c -w",
-    "build:tokens": "ts-node ./src/scripts/build-tokens.ts"
+    "build:tokens": "ts-node ./src/scripts/build-tokens.ts",
+    "prepare": "husky install"
   },
   "author": "andres-vizcaino",
   "license": "ISC",
@@ -60,7 +61,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "ts-node": "^10.8.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "husky": "^8.0.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
