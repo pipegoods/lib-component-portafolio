@@ -1,9 +1,8 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import classNames from "classnames";
-import "./Paragraph.css";
+import styles from "./Paragraph.module.css";
 
 type ParagraphProps = {
-  children: string;
   isInline?: boolean;
   isCentered?: boolean;
   weight?: "normal" | "medium" | "semibold";
@@ -16,11 +15,13 @@ const Paragraph = ({
   isInline,
   size = "md",
   weight = "normal"
-}: ParagraphProps) => (
+}: PropsWithChildren<ParagraphProps>) => (
   <p
-    className={classNames(`paragraph size-${size} weight-${weight}`, {
-      "is-inline": isInline,
-      "is-centered": isCentered
+    className={classNames(styles.paragraph, {
+      [styles["is-centered"]]: isCentered,
+      [styles["is-inline"]]: isInline,
+      [styles[`size-${size}`]]: size,
+      [styles[`weight-${weight}`]]: weight
     })}
   >
     {children}

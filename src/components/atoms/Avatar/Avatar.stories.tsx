@@ -14,17 +14,10 @@ const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
 export const Default = Template.bind({});
 
-export const Sm = Template.bind({});
-Sm.args = {
-  size: "sm"
-};
-
-export const Md = Template.bind({});
-Md.args = {
-  size: "md"
-};
-
-export const Lg = Template.bind({});
-Lg.args = {
-  size: "lg"
-};
+export const Sizes = () => (
+  <div>
+    <Avatar src="https://picsum.photos/id/1027/200/200" size="sm" />
+    <Avatar src="https://picsum.photos/id/1027/200/200" size="md" />
+    <Avatar src="https://picsum.photos/id/1027/200/200" size="lg" />
+  </div>
+);

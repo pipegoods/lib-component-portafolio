@@ -29,16 +29,13 @@ export default [
       resolve(),
       commonjs(),
       typescript({
-        exclude: [
-          // Exclude test files
-          /\.test.((js|jsx|ts|tsx))$/,
-          // Exclude story files
-          /\.stories.((js|jsx|ts|tsx|mdx))$/
-        ],
+        exclude: [/\.test.((js|jsx|ts|tsx))$/, /\.stories.((js|jsx|ts|tsx|mdx))$/],
         tsconfig: "./tsconfig.json",
         module: "esnext"
       }),
-      postcss(),
+      postcss({
+        modules: true
+      }),
       terser()
     ]
   },

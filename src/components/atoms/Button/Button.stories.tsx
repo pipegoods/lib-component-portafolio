@@ -4,7 +4,22 @@ import Button from "./Button";
 
 export default {
   title: "Atom/Button",
-  component: Button
+  component: Button,
+  argTypes: {
+    type: {
+      control: {
+        type: "select",
+        options: ["primary", "secondary", "tertiary"]
+      }
+    },
+    isInline: {
+      control: "boolean"
+    }
+  },
+  args: {
+    type: "primary",
+    isInline: false
+  }
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;

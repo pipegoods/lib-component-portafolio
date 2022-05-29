@@ -1,9 +1,8 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import classNames from "classnames";
-import "./Heading.css";
+import styles from "./Heading.module.css";
 
 type HeadingProps = {
-  children: string;
   isCentered?: boolean;
   isInline?: boolean;
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
@@ -11,16 +10,18 @@ type HeadingProps = {
 };
 
 const Heading = ({
-  children,
   isCentered,
   isInline,
+  children,
   size = "md",
   weight = "bold"
-}: HeadingProps) => (
+}: PropsWithChildren<HeadingProps>) => (
   <h1
-    className={classNames(`heading size-${size} weight-${weight}`, {
-      "is-centered": isCentered,
-      "is-inline": isInline
+    className={classNames(styles.heading, {
+      [styles["is-centered"]]: isCentered,
+      [styles["is-inline"]]: isInline,
+      [styles[`size-${size}`]]: size,
+      [styles[`weight-${weight}`]]: weight
     })}
   >
     {children}
